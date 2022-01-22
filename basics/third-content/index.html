@@ -12,20 +12,20 @@
     <title>2. Interactive computing on keeling :: ATMS Illinois Computing Documentation</title>
 
     
-    <link href="/css/nucleus.css?1642885967" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1642885967" rel="stylesheet">
-    <link href="/css/hybrid.css?1642885967" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1642885967" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1642885967" rel="stylesheet">
-    <link href="/css/auto-complete.css?1642885967" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1642885967" rel="stylesheet">
-    <link href="/css/theme.css?1642885967" rel="stylesheet">
-    <link href="/css/tabs.css?1642885967" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1642885967" rel="stylesheet">
+    <link href="/css/nucleus.css?1642886269" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642886269" rel="stylesheet">
+    <link href="/css/hybrid.css?1642886269" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642886269" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642886269" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642886269" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642886269" rel="stylesheet">
+    <link href="/css/theme.css?1642886269" rel="stylesheet">
+    <link href="/css/tabs.css?1642886269" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642886269" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1642885967"></script>
+    <script src="/js/jquery-3.3.1.min.js?1642886269"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -42,7 +42,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <img src="/static/ATMS_Illinois.png">
+      <img src="/img/ATMS_Illinois.png">
     </div>
     
         <div class="searchbox">
@@ -51,14 +51,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1642885967"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1642885967"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1642886269"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642886269"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/atmsillinois.github.io";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1642885967"></script>
+<script type="text/javascript" src="/js/search.js?1642886269"></script>
 
     
   </div>
@@ -354,7 +354,7 @@
 <p>Keeling has a batch scheduling system that is used to launch interactive and non-interactive jobs on the cluster compute nodes.  Keeling&rsquo;s cluster compute nodes have a variety of configurations depending on the physical architecture of each compute node machine.  These nodes can be used individually, or used together for larger jobs using protocols such as MPI.</p>
 <h4 id="interactive-jobs-on-keeling-cluster-nodes">Interactive jobs on keeling cluster nodes</h4>
 <p>Interactive jobs can be run using the <code>qlogin</code> or <code>srun</code> commands.</p>
-<h5 id="qlogin">qlogin</h5>
+<h5 id="1-qlogin">1) qlogin</h5>
 <p>An example qlogin command could be:
 <code>qlogin -n 4 -mem 12G -time 12:00</code>
 Here, access to a machine with 4 reserved CPUs, 12 gigabytes of RAM, and 12 hours would be requested.  Once requested, you will notice that you will now be logged into one of the compute nodes.  For example, you will notice in the example below, the user is now logged into <code>keeling-a03</code>, one of the compute nodes.  Different resources are available depending on the user&rsquo;s request.  If no resources are available for a request, this can be due to the requested resources being not available because they do not exist on the cluster, or because they are being used by another user.</p>
@@ -372,7 +372,7 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
 user@keeling-a03 ~$
 </code></pre></div><p>Type <code>exit</code> to terminate the session when finished.  In this mode, if you lose your connection to keeling, the interactive session will also terminate.</p>
-<h5 id="srun">srun</h5>
+<h5 id="2-srun">2) srun</h5>
 <p>An alternative to <code>qlogin</code> is <code>srun</code>, which directly uses the slurm cluster management software to launch an interactive job.  Here, you can specify the cluster partition (<code>seseml</code>), specify the job name <code>&quot;InteractiveJob&quot;</code>, number of CPUs, memory per CPU, time, and the shell language (<code>bash</code>).</p>
 <p><code>srun -p seseml --job-name &quot;InteractiveJob&quot; --cpus-per-task 10 --mem-per-cpu 1000 --time 12:00:00 --pty bash</code></p>
 <p>The result is less verbose than for <code>qlogin</code>, but the result is the same.</p>
@@ -544,19 +544,19 @@ user@keeling-e03 ~$
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1642885967"></script>
-    <script src="/js/perfect-scrollbar.min.js?1642885967"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1642885967"></script>
-    <script src="/js/jquery.sticky.js?1642885967"></script>
-    <script src="/js/featherlight.min.js?1642885967"></script>
-    <script src="/js/highlight.pack.js?1642885967"></script>
+    <script src="/js/clipboard.min.js?1642886269"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642886269"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642886269"></script>
+    <script src="/js/jquery.sticky.js?1642886269"></script>
+    <script src="/js/featherlight.min.js?1642886269"></script>
+    <script src="/js/highlight.pack.js?1642886269"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1642885967"></script>
-    <script src="/js/learn.js?1642885967"></script>
-    <script src="/js/hugo-learn.js?1642885967"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642886269"></script>
+    <script src="/js/learn.js?1642886269"></script>
+    <script src="/js/hugo-learn.js?1642886269"></script>
     
         
-            <script src="/mermaid/mermaid.js?1642885967"></script>
+            <script src="/mermaid/mermaid.js?1642886269"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
