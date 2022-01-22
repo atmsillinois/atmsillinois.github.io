@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/basics/</loc>
+    <loc>https://atmsillinois.github.io/basics/</loc>
     <lastmod>2022-01-22T13:28:19-06:00</lastmod>
   </url><url>
-    <loc>/software/</loc>
+    <loc>https://atmsillinois.github.io/software/</loc>
     <lastmod>2022-01-22T13:36:52-06:00</lastmod>
   </url><url>
-    <loc>/basics/second-content/</loc>
+    <loc>https://atmsillinois.github.io/basics/second-content/</loc>
     <lastmod>2022-01-22T13:29:36-06:00</lastmod>
   </url><url>
-    <loc>/basics/third-content/</loc>
+    <loc>https://atmsillinois.github.io/basics/third-content/</loc>
     <lastmod>2022-01-22T13:32:26-06:00</lastmod>
   </url><url>
-    <loc>/basics/fourth-content/</loc>
+    <loc>https://atmsillinois.github.io/basics/fourth-content/</loc>
     <lastmod>2022-01-22T13:35:12-06:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://atmsillinois.github.io/</loc>
     <lastmod>2022-01-22T13:37:51-06:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>/software/solo3/</loc>
+    <loc>https://atmsillinois.github.io/software/solo3/</loc>
     <lastmod>2022-01-22T13:37:51-06:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://atmsillinois.github.io/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://atmsillinois.github.io/tags/</loc>
   </url>
 </urlset>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Software on ATMS Illinois Computing Documentation</title>
-    <link>/software/</link>
+    <link>https://atmsillinois.github.io/software/</link>
     <description>Recent content in Software on ATMS Illinois Computing Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jan 2022 13:36:52 -0600</lastBuildDate><atom:link href="/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Jan 2022 13:36:52 -0600</lastBuildDate><atom:link href="https://atmsillinois.github.io/software/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
