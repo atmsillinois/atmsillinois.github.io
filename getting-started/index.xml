@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Starteds on ATMS Illinois Computing Documentation</title>
+    <link>/getting-started/</link>
+    <description>Recent content in Getting Starteds on ATMS Illinois Computing Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jan 2022 17:19:38 -0600</lastBuildDate><atom:link href="/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1 Logging in to keeling</title>
+      <link>/getting-started/logging-in/</link>
+      <pubDate>Fri, 21 Jan 2022 17:19:38 -0600</pubDate>
+      
+      <guid>/getting-started/logging-in/</guid>
+      <description>Keeling is the ATMS computing cluster that can be used for interactive computing work and large batch computation. Interactive login access is available via ssh from the campus network or off campus through Cisco VPN Anyconnect. Instructions for installation of the UIUC VPN are here.
+Connecting To log into an ssh host from your computer, use one of the methods described here depending on your machine&amp;rsquo;s operating system.
+The hostname for keeling is</description>
+    </item>
+    
+    <item>
+      <title>2 keeling interactive computing</title>
+      <link>/getting-started/interactive/</link>
+      <pubDate>Fri, 21 Jan 2022 17:19:38 -0600</pubDate>
+      
+      <guid>/getting-started/interactive/</guid>
+      <description>keeling is a linux (Centos 7) computing system. It consists of a head node machine (keeling.earth.illinois.edu), and a series of nodes that are connected to the head node.
+The head node The head node can be used for light computing. such as moving files around, running interactive display software, or running scripts that are not computationally expensive and use more than 4 CPU cores. It can also be used to launch interactive or non-interactive batch jobs using the cluster&amp;rsquo;s scheduler slurm.</description>
+    </item>
+    
+    <item>
+      <title>3 Using screen to perpetuate sessions</title>
+      <link>/getting-started/screen/</link>
+      <pubDate>Fri, 21 Jan 2022 17:19:38 -0600</pubDate>
+      
+      <guid>/getting-started/screen/</guid>
+      <description>Persisting sessions using the screen command Sessions on the head node or the interactive nodes can be persisted even if your local computer disconnects from keeling. This is accomplished using the screen command.
+To start a screen session, simply type screen in your console:
+user@keeling ~$ screen This will open a screen session, create a new screen session, and start a shell in that window.
+Now that you have opened a screen session, you can get a list of commands by typing:</description>
+    </item>
+    
+  </channel>
+</rss>

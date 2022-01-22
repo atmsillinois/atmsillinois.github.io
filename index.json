@@ -1,0 +1,64 @@
+[
+{
+	"uri": "/basics/",
+	"title": "Keeling Basics",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Getting started "
+},
+{
+	"uri": "/software/",
+	"title": "Software",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2 Keeling software help "
+},
+{
+	"uri": "/basics/second-content/",
+	"title": "1. Logging in via ssh",
+	"tags": [],
+	"description": "",
+	"content": "Keeling is the ATMS computing cluster that can be used for interactive computing work and large batch computation. Interactive login access is available via ssh from the campus network or off campus through Cisco VPN Anyconnect. Instructions for installation of the UIUC VPN are here.\nConnecting To log into an ssh host from your computer, use one of the methods described here depending on your machine\u0026rsquo;s operating system.\nThe hostname for keeling is\nkeeling.earth.illinois.edu\nIf you are using a terminal on MacOS or linux, log in to keeling using the following:\nssh -Y netID@keeling.earth.illinois.edu\nYou\u0026rsquo;ll use your UIUC netID to log in to keeling.\nNeed X11 graphical display? If you need X11 window capabilities (for example, running solo), then you may need to install additional software the first time you connect. A guide for installing that software for Windows (Xming or MobaXterm) and MacOS (XQuartz) can be found here.\n"
+},
+{
+	"uri": "/basics/third-content/",
+	"title": "2. Interactive computing on keeling",
+	"tags": [],
+	"description": "",
+	"content": "keeling is a linux (Centos 7) computing system. It consists of a head node machine (keeling.earth.illinois.edu), and a series of nodes that are connected to the head node.\nThe head node The head node can be used for light computing. such as moving files around, running interactive display software, or running scripts that are not computationally expensive and use more than 4 CPU cores. It can also be used to launch interactive or non-interactive batch jobs using the cluster\u0026rsquo;s scheduler slurm. Keeling is a shared resource and is monitored for abuse. CPU or memory intensive jobs will be automatically killed - these should be run on compute nodes to maintain system stability.\nCluster compute nodes Keeling has a batch scheduling system that is used to launch interactive and non-interactive jobs on the cluster compute nodes. Keeling\u0026rsquo;s cluster compute nodes have a variety of configurations depending on the physical architecture of each compute node machine. These nodes can be used individually, or used together for larger jobs using protocols such as MPI.\nInteractive jobs on keeling cluster nodes Interactive jobs can be run using the qlogin or srun commands.\nqlogin An example qlogin command could be: qlogin -n 4 -mem 12G -time 12:00 Here, access to a machine with 4 reserved CPUs, 12 gigabytes of RAM, and 12 hours would be requested. Once requested, you will notice that you will now be logged into one of the compute nodes. For example, you will notice in the example below, the user is now logged into keeling-a03, one of the compute nodes. Different resources are available depending on the user\u0026rsquo;s request. If no resources are available for a request, this can be due to the requested resources being not available because they do not exist on the cluster, or because they are being used by another user.\nuser@keeling ~$ qlogin -n 4 -mem 12G -time 12:00 qlogin session: 549988 processors allocated: 4 per-proc memory allocated: 12.0GB session valid until: Fri Jan 21 17:09:15 2022 connecting to node: keeling-a03 type \u0026#34;exit\u0026#34; to return to head node vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv user@keeling-a03 ~$ Type exit to terminate the session when finished. In this mode, if you lose your connection to keeling, the interactive session will also terminate.\nsrun An alternative to qlogin is srun, which directly uses the slurm cluster management software to launch an interactive job. Here, you can specify the cluster partition (seseml), specify the job name \u0026quot;InteractiveJob\u0026quot;, number of CPUs, memory per CPU, time, and the shell language (bash).\nsrun -p seseml --job-name \u0026quot;InteractiveJob\u0026quot; --cpus-per-task 10 --mem-per-cpu 1000 --time 12:00:00 --pty bash\nThe result is less verbose than for qlogin, but the result is the same.\nuser@keeling ~$ srun -p seseml --job-name \u0026#34;InteractiveJob\u0026#34; --cpus-per-task 10 --mem-per-cpu 1000 --time 12:00:00 --pty bash user@keeling-e03 ~$ Again, exit will terminate the interactive job.\n"
+},
+{
+	"uri": "/basics/fourth-content/",
+	"title": "3. Using screen to persist computations",
+	"tags": [],
+	"description": "",
+	"content": "Persisting sessions using the screen command Sessions on the head node or the interactive nodes can be persisted even if your local computer disconnects from keeling. This is accomplished using the screen command.\nTo start a screen session, simply type screen in your console:\nuser@keeling ~$ screen This will open a screen session, create a new screen session, and start a shell in that window.\nNow that you have opened a screen session, you can get a list of commands by typing:\nCtrl+a ?\nStarting Named Session Named sessions are useful when you run multiple screen sessions. To create a named session, run the screen command with the following arguments:\nscreen -S session_name It’s always a good idea to choose a descriptive session name.\nWorking with Linux screen sessions When you start a new screen session, it creates a single window with a shell in it.\nYou can have multiple windows inside a Screen session.\nTo create a new window with shell type Ctrl+a c, the first available number from the range 0...9 will be assigned to it.\nBelow are some most common commands for managing Linux Screen Windows:\n Ctrl+a c Create a new window (with shell). Ctrl+a \u0026quot; List all windows. Ctrl+a 0 Switch to window 0 (by number). Ctrl+a A Rename the current window. Ctrl+a S Split current region horizontally into two regions. Ctrl+a | Split current region vertically into two regions. Ctrl+a tab Switch the input focus to the next region. Ctrl+a Ctrl+a Toggle between the current and previous windows Ctrl+a Q Close all regions but the current one. Ctrl+a X Close the current region.  Detach from Linux screen session You can detach from the screen session at any time by typing:\nCtrl+a d\nThe program running in the screen session will continue to run after you detach from the session.\nReattach to a linux screen To resume your screen session use the following command:\nuser@keeling ~$ screen -r In case you have multiple screen sessions running on your machine, you will need to append the screen session ID after the r switch.\nTo find the session ID list the current running screen sessions with:\nuser@keeling ~$ screen -ls Example output:\nuser@keeling ~$ screen -ls There are screens on: 224185.jupyter\t(Detached) 66327.tunnel\t(Detached) 90455.oban\t(Detached) 3 Sockets in /var/run/screen/S-user. If you want to restore screen 224185.jupyter, then type the following command:\nuser@keeling ~$ screen -r 224185 or, using the descriptive name you provided with screen -S\nuser@keeling ~$ screen -r jupyter Basic screen usage Basic Linux Screen Usage\nBelow are the most basic steps for getting started with screen:\n On the command prompt, type screen. It\u0026rsquo;s better to name the session with screen -S descriptive_name. Run the desired program. Use the key sequence Ctrl-a + Ctrl-d to detach from the screen session. Reattach to the screen session by typing screen -r. When you are all done, type exit to end the screen session.  "
+},
+{
+	"uri": "/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Welcome to the ATMS Computing Web Site This page contains documentation and examples for working with computing resources in the Department of Atmospheric Sciences.\n"
+},
+{
+	"uri": "/software/solo3/",
+	"title": "solo3",
+	"tags": [],
+	"description": "",
+	"content": " Be sure you are logged into keeling with ssh forwarding and have X11 software installed on your computer as described in the \u0026ldquo;Getting Started\u0026rdquo; page. Change directory to the location of the dorade radar files you wish to visualize. cd /path/to/radar/data/files Type solo3 at the command prompt.  A solo3 window should now appear in your local computer.\n"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

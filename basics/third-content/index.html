@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>2. Interactive computing on keeling :: ATMS Illinois Computing Documentation</title>
+
+    
+    <link href="/css/nucleus.css?1642884619" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1642884619" rel="stylesheet">
+    <link href="/css/hybrid.css?1642884619" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1642884619" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1642884619" rel="stylesheet">
+    <link href="/css/auto-complete.css?1642884619" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1642884619" rel="stylesheet">
+    <link href="/css/theme.css?1642884619" rel="stylesheet">
+    <link href="/css/tabs.css?1642884619" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1642884619" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1642884619"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/basics/third-content/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="ATMS_Illinois.png">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1642884619"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1642884619"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1642884619"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/" title="Keeling Basics" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/basics/">
+          <b>1. </b>Keeling Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/second-content/" title="1. Logging in via ssh" class="dd-item
+        
+        
+        
+        ">
+      <a href="/basics/second-content/">
+          1. Logging in via ssh
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/third-content/" title="2. Interactive computing on keeling" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/basics/third-content/">
+          2. Interactive computing on keeling
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/fourth-content/" title="3. Using screen to persist computations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/basics/fourth-content/">
+          3. Using screen to persist computations
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/software/" title="Software" class="dd-item
+        
+        
+        
+        ">
+      <a href="/software/">
+          <b>2. </b>Software
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/software/solo3/" title="solo3" class="dd-item
+        
+        
+        
+        ">
+      <a href="/software/solo3/">
+          solo3
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/basics/'>Keeling Basics</a> > 2. Interactive computing on keeling
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-head-node">The head node</a></li>
+        <li><a href="#cluster-compute-nodes">Cluster compute nodes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              2. Interactive computing on keeling
+            </h1>
+          
+
+        
+
+
+
+	<p><code>keeling</code> is a linux (Centos 7) computing system.  It consists of a head node machine (<code>keeling.earth.illinois.edu</code>), and a series of nodes that are connected to the head node.</p>
+<h3 id="the-head-node">The head node</h3>
+<p>The head node can be used for light computing. such as moving files around, running interactive display software, or running scripts that are not computationally expensive and use more than 4 CPU cores.  It can also be used to launch interactive or non-interactive batch jobs using the cluster&rsquo;s scheduler <code>slurm</code>.  Keeling is a shared resource and is monitored for abuse.  CPU or memory intensive jobs will be automatically killed - these should be run on compute nodes to maintain system stability.</p>
+<h3 id="cluster-compute-nodes">Cluster compute nodes</h3>
+<p>Keeling has a batch scheduling system that is used to launch interactive and non-interactive jobs on the cluster compute nodes.  Keeling&rsquo;s cluster compute nodes have a variety of configurations depending on the physical architecture of each compute node machine.  These nodes can be used individually, or used together for larger jobs using protocols such as MPI.</p>
+<h4 id="interactive-jobs-on-keeling-cluster-nodes">Interactive jobs on keeling cluster nodes</h4>
+<p>Interactive jobs can be run using the <code>qlogin</code> or <code>srun</code> commands.</p>
+<h5 id="qlogin">qlogin</h5>
+<p>An example qlogin command could be:
+<code>qlogin -n 4 -mem 12G -time 12:00</code>
+Here, access to a machine with 4 reserved CPUs, 12 gigabytes of RAM, and 12 hours would be requested.  Once requested, you will notice that you will now be logged into one of the compute nodes.  For example, you will notice in the example below, the user is now logged into <code>keeling-a03</code>, one of the compute nodes.  Different resources are available depending on the user&rsquo;s request.  If no resources are available for a request, this can be due to the requested resources being not available because they do not exist on the cluster, or because they are being used by another user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user@keeling ~$ qlogin -n <span style="color:#ae81ff">4</span> -mem 12G -time 12:00
+
+
+           qlogin session: <span style="color:#ae81ff">549988</span>
+     processors allocated: <span style="color:#ae81ff">4</span>
+per-proc memory allocated: 12.0GB
+      session valid <span style="color:#66d9ef">until</span>: Fri Jan <span style="color:#ae81ff">21</span> 17:09:15 <span style="color:#ae81ff">2022</span>
+       connecting to node: keeling-a03
+
+type <span style="color:#e6db74">&#34;exit&#34;</span> to <span style="color:#66d9ef">return</span> to head node
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+user@keeling-a03 ~$
+</code></pre></div><p>Type <code>exit</code> to terminate the session when finished.  In this mode, if you lose your connection to keeling, the interactive session will also terminate.</p>
+<h5 id="srun">srun</h5>
+<p>An alternative to <code>qlogin</code> is <code>srun</code>, which directly uses the slurm cluster management software to launch an interactive job.  Here, you can specify the cluster partition (<code>seseml</code>), specify the job name <code>&quot;InteractiveJob&quot;</code>, number of CPUs, memory per CPU, time, and the shell language (<code>bash</code>).</p>
+<p><code>srun -p seseml --job-name &quot;InteractiveJob&quot; --cpus-per-task 10 --mem-per-cpu 1000 --time 12:00:00 --pty bash</code></p>
+<p>The result is less verbose than for <code>qlogin</code>, but the result is the same.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user@keeling ~$ srun -p seseml --job-name <span style="color:#e6db74">&#34;InteractiveJob&#34;</span> --cpus-per-task <span style="color:#ae81ff">10</span> --mem-per-cpu <span style="color:#ae81ff">1000</span> --time 12:00:00 --pty bash
+user@keeling-e03 ~$
+</code></pre></div><p>Again, <code>exit</code> will terminate the interactive job.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/basics/second-content/" title="1. Logging in via ssh"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/basics/fourth-content/" title="3. Using screen to persist computations" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1642884619"></script>
+    <script src="/js/perfect-scrollbar.min.js?1642884619"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1642884619"></script>
+    <script src="/js/jquery.sticky.js?1642884619"></script>
+    <script src="/js/featherlight.min.js?1642884619"></script>
+    <script src="/js/highlight.pack.js?1642884619"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1642884619"></script>
+    <script src="/js/learn.js?1642884619"></script>
+    <script src="/js/hugo-learn.js?1642884619"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1642884619"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
